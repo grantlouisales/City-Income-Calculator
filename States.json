@@ -1,0 +1,452 @@
+{
+  "Mississippi" : {
+    "State": "Mississippi",
+    "costIndex": "86.1000",
+    "groceryCost": "93.2000",
+    "housingCost": 66,
+    "utilitiesCost": "92.3000",
+    "transportationCost": "89.1000",
+    "miscCost": "91.4000"
+  },
+  "Arkansas" : {
+    "State": "Arkansas",
+    "costIndex": "86.9000",
+    "groceryCost": "92.5000",
+    "housingCost": "75.6000",
+    "utilitiesCost": "90.7000",
+    "transportationCost": 91,
+    "miscCost": "97.4000"
+  },
+  "Oklahoma" : {
+    "State": "Oklahoma",
+    "costIndex": 87,
+    "groceryCost": "94.6000",
+    "housingCost": 73,
+    "utilitiesCost": "93.4000",
+    "transportationCost": "92.5000",
+    "miscCost": "93.5000"
+  },
+  "Missouri" : {
+    "State": "Missouri",
+    "costIndex": "87.1000",
+    "groceryCost": "95.4000",
+    "housingCost": "78.3000",
+    "utilitiesCost": "96.3000",
+    "transportationCost": "90.4000",
+    "miscCost": "95.8000"
+  },
+  "New Mexico" : {
+    "State": "New Mexico",
+    "costIndex": "87.5000",
+    "groceryCost": "94.6000",
+    "housingCost": "84.4000",
+    "utilitiesCost": "89.9000",
+    "transportationCost": "98.5000",
+    "miscCost": "91.9000"
+  },
+  "Tennessee" : {
+    "State": "Tennessee",
+    "costIndex": "88.7000",
+    "groceryCost": 93,
+    "housingCost": "79.4000",
+    "utilitiesCost": "91.7000",
+    "transportationCost": "8.6000",
+    "miscCost": "92.9000"
+  },
+  "Michigan" : {
+    "State": "Michigan",
+    "costIndex": "88.9000",
+    "groceryCost": 91,
+    "housingCost": "80.2000",
+    "utilitiesCost": "98.5000",
+    "transportationCost": "101.8000",
+    "miscCost": "96.4000"
+  },
+  "Kansas" : {
+    "State": "Kansas",
+    "costIndex": 89,
+    "groceryCost": "92.6000",
+    "housingCost": 70,
+    "utilitiesCost": "100.1000",
+    "transportationCost": "95.4000",
+    "miscCost": "90.3000"
+  },
+  "Georgia" : {
+    "State": "Georgia",
+    "costIndex": "89.2000",
+    "groceryCost": "96.3000",
+    "housingCost": "74.3000",
+    "utilitiesCost": "90.3000",
+    "transportationCost": "95.7000",
+    "miscCost": "96.6000"
+  },
+  "Alabama" : {
+    "State": "Alabama",
+    "costIndex": "89.3000",
+    "groceryCost": 98,
+    "housingCost": "69.2000",
+    "utilitiesCost": "100.7000",
+    "transportationCost": "92.8000",
+    "miscCost": "94.1000"
+  },
+  "Wyoming" : {
+    "State": "Wyoming",
+    "costIndex": "89.3000",
+    "groceryCost": "103.5000",
+    "housingCost": "81.7000",
+    "utilitiesCost": "87.4000",
+    "transportationCost": "94.5000",
+    "miscCost": "105.5000"
+  },
+  "Indiana" : {
+    "State": "Indiana",
+    "costIndex": 90,
+    "groceryCost": "92.4000",
+    "housingCost": "76.4000",
+    "utilitiesCost": "96.7000",
+    "transportationCost": "96.6000",
+    "miscCost": "95.2000"
+  },
+  "Iowa" : {
+    "State": "Iowa",
+    "costIndex": "90.1000",
+    "groceryCost": "98.3000",
+    "housingCost": "76.5000",
+    "utilitiesCost": "94.1000",
+    "transportationCost": "98.6000",
+    "miscCost": "93.7000"
+  },
+  "Nebraska" : {
+    "State": "Nebraska",
+    "costIndex": "90.8000",
+    "groceryCost": "98.6000",
+    "housingCost": "86.6000",
+    "utilitiesCost": "88.9000",
+    "transportationCost": "100.4000",
+    "miscCost": "96.8000"
+  },
+  "Ohio" : {
+    "State": "Ohio",
+    "costIndex": "90.8000",
+    "groceryCost": "97.9000",
+    "housingCost": "76.1000",
+    "utilitiesCost": "90.7000",
+    "transportationCost": "99.6000",
+    "miscCost": "98.7000"
+  },
+  "Kentucky" : {
+    "State": "Kentucky",
+    "costIndex": "90.9000",
+    "groceryCost": "93.3000",
+    "housingCost": "80.1000",
+    "utilitiesCost": "104.2000",
+    "transportationCost": "101.6000",
+    "miscCost": "103.7000"
+  },
+  "West Virginia" : {
+    "State": "West Virginia",
+    "costIndex": "91.1000",
+    "groceryCost": "97.9000",
+    "housingCost": "77.1000",
+    "utilitiesCost": "88.2000",
+    "transportationCost": "104.8000",
+    "miscCost": "102.9000"
+  },
+  "Texas" : {
+    "State": "Texas",
+    "costIndex": "91.5000",
+    "groceryCost": "91.2000",
+    "housingCost": "83.5000",
+    "utilitiesCost": "103.3000",
+    "transportationCost": "90.9000",
+    "miscCost": 97
+  },
+  "Idaho" : {
+    "State": "Idaho",
+    "costIndex": "92.3000",
+    "groceryCost": "91.6000",
+    "housingCost": "105.5000",
+    "utilitiesCost": "82.8000",
+    "transportationCost": "98.6000",
+    "miscCost": "100.9000"
+  },
+  "Louisiana" : {
+    "State": "Louisiana",
+    "costIndex": "93.9000",
+    "groceryCost": "95.6000",
+    "housingCost": "86.3000",
+    "utilitiesCost": "86.7000",
+    "transportationCost": "94.9000",
+    "miscCost": "98.4000"
+  },
+  "Illinois" : {
+    "State": "Illinois",
+    "costIndex": "94.5000",
+    "groceryCost": "97.4000",
+    "housingCost": "85.2000",
+    "utilitiesCost": "95.8000",
+    "transportationCost": "106.5000",
+    "miscCost": "96.7000"
+  },
+  "North Carolina" : {
+    "State": "North Carolina",
+    "costIndex": "94.9000",
+    "groceryCost": "97.4000",
+    "housingCost": "91.8000",
+    "utilitiesCost": "97.2000",
+    "transportationCost": "95.1000",
+    "miscCost": "99.2000"
+  },
+  "South Carolina" : {
+    "State": "South Carolina",
+    "costIndex": "95.9000",
+    "groceryCost": "101.8000",
+    "housingCost": "80.1000",
+    "utilitiesCost": 105,
+    "transportationCost": "93.5000",
+    "miscCost": "99.4000"
+  },
+  "Arizona" : {
+    "State": "Arizona",
+    "costIndex": 97,
+    "groceryCost": "101.8000",
+    "housingCost": "106.2000",
+    "utilitiesCost": "105.2000",
+    "transportationCost": "98.8000",
+    "miscCost": "99.7000"
+  },
+  "Wisconsin" : {
+    "State": "Wisconsin",
+    "costIndex": "97.3000",
+    "groceryCost": "100.9000",
+    "housingCost": "88.6000",
+    "utilitiesCost": "98.1000",
+    "transportationCost": "97.8000",
+    "miscCost": "98.9000"
+  },
+  "Florida" : {
+    "State": "Florida",
+    "costIndex": "97.9000",
+    "groceryCost": "106.9000",
+    "housingCost": "99.6000",
+    "utilitiesCost": "103.1000",
+    "transportationCost": "101.7000",
+    "miscCost": "98.4000"
+  },
+  "Utah" : {
+    "State": "Utah",
+    "costIndex": "98.4000",
+    "groceryCost": "97.9000",
+    "housingCost": "97.6000",
+    "utilitiesCost": "93.2000",
+    "transportationCost": "99.8000",
+    "miscCost": "99.5000"
+  },
+  "North Dakota" : {
+    "State": "North Dakota",
+    "costIndex": "98.8000",
+    "groceryCost": "102.1000",
+    "housingCost": "93.7000",
+    "utilitiesCost": "93.3000",
+    "transportationCost": "105.2000",
+    "miscCost": "96.3000"
+  },
+  "South Dakota" : {
+    "State": "South Dakota",
+    "costIndex": "99.8000",
+    "groceryCost": "101.8000",
+    "housingCost": "112.7000",
+    "utilitiesCost": "91.2000",
+    "transportationCost": "89.7000",
+    "miscCost": "91.1000"
+  },
+  "Virginia" : {
+    "State": "Virginia",
+    "costIndex": "100.7000",
+    "groceryCost": "96.1000",
+    "housingCost": "112.1000",
+    "utilitiesCost": "96.5000",
+    "transportationCost": "88.7000",
+    "miscCost": "100.2000"
+  },
+  "Minnesota" : {
+    "State": "Minnesota",
+    "costIndex": "101.6000",
+    "groceryCost": 105,
+    "housingCost": "90.4000",
+    "utilitiesCost": "96.2000",
+    "transportationCost": "102.8000",
+    "miscCost": "108.8000"
+  },
+  "Pennsylvania" : {
+    "State": "Pennsylvania",
+    "costIndex": "101.7000",
+    "groceryCost": "109.3000",
+    "housingCost": "100.6000",
+    "utilitiesCost": "109.5000",
+    "transportationCost": 112,
+    "miscCost": "102.9000"
+  },
+  "Colorado" : {
+    "State": "Colorado",
+    "costIndex": "105.6000",
+    "groceryCost": "99.9000",
+    "housingCost": "116.7000",
+    "utilitiesCost": "87.9000",
+    "transportationCost": 103,
+    "miscCost": "107.4000"
+  },
+  "Montana" : {
+    "State": "Montana",
+    "costIndex": "106.9000",
+    "groceryCost": "103.1000",
+    "housingCost": "105.9000",
+    "utilitiesCost": "88.1000",
+    "transportationCost": "95.3000",
+    "miscCost": "98.6000"
+  },
+  "Delaware" : {
+    "State": "Delaware",
+    "costIndex": "108.1000",
+    "groceryCost": "109.5000",
+    "housingCost": "93.3000",
+    "utilitiesCost": "104.3000",
+    "transportationCost": 111,
+    "miscCost": "113.7000"
+  },
+  "Nevada" : {
+    "State": "Nevada",
+    "costIndex": "108.5000",
+    "groceryCost": "110.8000",
+    "housingCost": "118.5000",
+    "utilitiesCost": 87,
+    "transportationCost": "113.2000",
+    "miscCost": "99.3000"
+  },
+  "New Hampshire" : {
+    "State": "New Hampshire",
+    "costIndex": "109.7000",
+    "groceryCost": "99.7000",
+    "housingCost": "110.3000",
+    "utilitiesCost": "115.2000",
+    "transportationCost": "99.6000",
+    "miscCost": "110.8000"
+  },
+  "Washington" : {
+    "State": "Washington",
+    "costIndex": "110.7000",
+    "groceryCost": "109.2000",
+    "housingCost": "116.7000",
+    "utilitiesCost": "91.1000",
+    "transportationCost": "118.3000",
+    "miscCost": "110.4000"
+  },
+  "Vermont" : {
+    "State": "Vermont",
+    "costIndex": "114.5000",
+    "groceryCost": "109.5000",
+    "housingCost": "136.7000",
+    "utilitiesCost": "120.6000",
+    "transportationCost": "116.4000",
+    "miscCost": "104.1000"
+  },
+  "Maine" : {
+    "State": "Maine",
+    "costIndex": "117.5000",
+    "groceryCost": "100.4000",
+    "housingCost": 142,
+    "utilitiesCost": "107.2000",
+    "transportationCost": "106.9000",
+    "miscCost": "108.4000"
+  },
+  "Rhode Island" : {
+    "State": "Rhode Island",
+    "costIndex": "119.4000",
+    "groceryCost": "108.7000",
+    "housingCost": "124.2000",
+    "utilitiesCost": "125.8000",
+    "transportationCost": "111.1000",
+    "miscCost": "118.7000"
+  },
+  "New Jersey" : {
+    "State": "New Jersey",
+    "costIndex": "125.1000",
+    "groceryCost": "108.7000",
+    "housingCost": 137,
+    "utilitiesCost": "104.6000",
+    "transportationCost": "106.5000",
+    "miscCost": "106.6000"
+  },
+  "Connecticut" : {
+    "State": "Connecticut",
+    "costIndex": "127.7000",
+    "groceryCost": "101.8000",
+    "housingCost": "137.7000",
+    "utilitiesCost": "132.3000",
+    "transportationCost": "112.7000",
+    "miscCost": "114.1000"
+  },
+  "Maryland" : {
+    "State": "Maryland",
+    "costIndex": "129.7000",
+    "groceryCost": "108.7000",
+    "housingCost": "171.3000",
+    "utilitiesCost": 104,
+    "transportationCost": "110.5000",
+    "miscCost": 108
+  },
+  "Alaska" : {
+    "State": "Alaska",
+    "costIndex": "129.9000",
+    "groceryCost": "132.7000",
+    "housingCost": "126.6000",
+    "utilitiesCost": 157,
+    "transportationCost": 111,
+    "miscCost": "113.7000"
+  },
+  "Massachusetts" : {
+    "State": "Massachusetts",
+    "costIndex": "131.6000",
+    "groceryCost": 117,
+    "housingCost": "179.2000",
+    "utilitiesCost": "110.8000",
+    "transportationCost": "112.2000",
+    "miscCost": "116.1000"
+  },
+  "Oregon" : {
+    "State": "Oregon",
+    "costIndex": "134.2000",
+    "groceryCost": 109,
+    "housingCost": "178.1000",
+    "utilitiesCost": "90.1000",
+    "transportationCost": "125.3000",
+    "miscCost": "118.5000"
+  },
+  "New York" : {
+    "State": "New York",
+    "costIndex": "139.1000",
+    "groceryCost": "118.3000",
+    "housingCost": "230.2000",
+    "utilitiesCost": "99.2000",
+    "transportationCost": "110.6000",
+    "miscCost": "114.8000"
+  },
+  "California" : {
+    "State": "California",
+    "costIndex": "151.7000",
+    "groceryCost": "110.3000",
+    "housingCost": "192.7000",
+    "utilitiesCost": "128.5000",
+    "transportationCost": "136.1000",
+    "miscCost": "111.3000"
+  },
+  "Hawaii" : {
+    "State": "Hawaii",
+    "costIndex": "192.9000",
+    "groceryCost": "157.9000",
+    "housingCost": "313.1000",
+    "utilitiesCost": "169.2000",
+    "transportationCost": "141.1000",
+    "miscCost": "126.7000"
+  }
+}
