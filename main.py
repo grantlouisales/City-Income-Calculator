@@ -84,6 +84,8 @@ def state_cost_index_difference(state_1, state_2, db):
     float_cost_index1 = float(state_1_cost_index)
     float_cost_index2 = float(state_2_cost_index)
 
+    print(f"{state_1} - {state_1_cost_index} || {state_2} - {state_2_cost_index}")
+
     if float_cost_index1 > float_cost_index2:
         result = float_cost_index1 - float_cost_index2
         print(f"There is a {result:.0f} cost index decrease between "
@@ -158,7 +160,12 @@ def main():
     data = open_data("States.json")
     valid = True
 
+    
     display_menu()
+
+    y = input("State1: ")
+    z = input("State2: ")
+    state_cost_index_difference(y, z, db)
 
     # compare_income_to_state_cost_index("Grant Ales", 5000, "Nevada", "Idaho", db)
 
