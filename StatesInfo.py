@@ -1,7 +1,7 @@
 class StateInfo:
     def __init__(self, information):
-         self.information = information
-        
+        self.information = information
+
     def _get_name(self):
         return self.information["State"]
 
@@ -22,3 +22,15 @@ class StateInfo:
 
     def _get_misc_cost(self):
         return self.information["miscCost"]
+
+    def __str__(self):
+        gn = f"State - {self.information['State']}\n"
+        ci = f"Cost Index - {self.information['costIndex']}\n"
+        gc = f"Grocery Cost - {self.information['groceryCost']}\n"
+        hc = f"Housing Cost - {self.information['housingCost']}\n"
+        uc = f"Utilities Cost - {self.information['utilitiesCost']}\n"
+        tc = f"Transportation Cost - {self.information['transportationCost']}\n"
+        mc = f"Misc Cost - {self.information['miscCost']}\n"
+        return f"{gn}{ci}{gc}{hc}{uc}{tc}{mc}"
+
+

@@ -1,4 +1,3 @@
-from os import remove
 import firebase_admin
 import json
 from StatesInfo import StateInfo
@@ -19,18 +18,77 @@ def open_data(filename):
     return data
 
 
-def compare_income_to_state_cost_index(name, income, state_1, state_2, db):
+def description():
+    """
+    Purpose: This function will describe all of the details of 
+    the project. It will go over what cost index, grocery cost,
+    housing cost, misc cost, transportation cost, and utilities cost
+    is.
+
+    Return: Nothing. This function will only print out a paragraph explaining
+    everything. 
+    """
+    pass
+
+
+def get_state_info(state, db):
+    """
+    Purpose: This will grab the state given by the user and
+    output all of the information.
+
+    Return: This function returns the function string overide
+    with all of th estate information.
+    """
+    given_state = db.collection("States").document(state).get()
+
+    if given_state.exists:
+        state1 = given_state.to_dict()
+    else:
+        print("State does not exist in the database")
+        return 
+
+    state = StateInfo(state1)
+    print(state)
+
+
+def state_cost_index_difference(state_1, state_2, db):
+    """
+    Purpose: The function is meant to receive the information for
+    the given states and find the difference in cost index between the
+    two.
+
+    Return: This function returns nothing. It will only return print 
+    statements.
+    """
     state_1_result = db.collection("States").document(state_1).get()
     state_2_result = db.collection("States").document(state_2).get()
 
-    if state_1_result.exists and state_2_result:
+    if state_1_result.exists and state_2_result.exists:
             state1 = state_1_result.to_dict()
             state2 = state_2_result.to_dict()
+    else: 
+        print("One of the given states were not correct")
+        return 
 
+    state_1_cost_index = StateInfo(state1)._get_cost_index()
+    state_2_cost_index = StateInfo(state2)._get_cost_index()
+    
+    float_cost_index1 = float(state_1_cost_index)
+    float_cost_index2 = float(state_2_cost_index)
 
-    state_1 = StateInfo(state1)
-    state_2 = StateInfo(state2)
+    if float_cost_index1 > float_cost_index2:
+        result = float_cost_index1 - float_cost_index2
+        print(f"There is a {result:.0f} cost index decrease between "
+              f"{StateInfo(state1)._get_name()} and {StateInfo(state2)._get_name()}")
 
+    elif float_cost_index1 < float_cost_index2:
+        result = float_cost_index2 - float_cost_index1
+        print(f"There is a {result:.0f} cost index increase between "
+              f"{StateInfo(state1)._get_name()} and {StateInfo(state2)._get_name()}")
+    
+    else:
+        print(f"There is no difference between {StateInfo(state1)._get_name()}" 
+              f" and {StateInfo(state2)._get_name()}")
 
 
 def add_person(name, state, monthly_income, db):
@@ -39,13 +97,14 @@ def add_person(name, state, monthly_income, db):
     database. It will create a class that will extract information
     and send it into the cloud database.
 
-    Returns: Nothing. It will only add the give person to the database.
+    Return: Nothing. It will only add the give person to the database.
     """
     person = User(name, state, monthly_income)
     person_data = {"Name": person._get_name(), "State": person._get_state(), 
                    "Income": person._get_monthly_income()}
 
     db.collection("Persons").document(name).set(person_data)
+
 
 def remove_person(name, db):
     """
@@ -54,7 +113,7 @@ def remove_person(name, db):
     does, delete the document in the cloud database. If it does not exist,
     it will send an error message to the user.
 
-    Returns: Nothing. It will either print out an error message or 
+    Return: Nothing. It will either print out an error message or 
     delete the document specified.
     """
     result = db.collection("Persons").document(name)
@@ -65,17 +124,33 @@ def remove_person(name, db):
         print("This person does not exist in the system.")
 
 
+def display_menu():
+    """
+    Purpose: Prints out a simple menu to the user.
+
+    Return: Nothing. It will only print out statements in
+    this function.
+    """
+    print("\n==========================================")
+    print("1. Add Person")
+    print("2. Remove Person")
+    print("3. Check the state cost index difference")
+    print("4. Print out a states information")
+    print("5. Check income compared to other state")
+    print("6. Quit")
+    print("==========================================\n")
+
+
 def main():
     cred = credentials.Certificate("serviceAccountKey.json")
     firebase_admin.initialize_app(cred)
 
     # Stores client to firestore database.
     db = firestore.client()
-
     data = open_data("States.json")
-    add_person("Grant Ales", "Idaho", 5000, db)
-    add_person("Breanna Ales", "Idaho", 8000, db)
+    valid = True
 
+    display_menu()
 
     # compare_income_to_state_cost_index("Grant Ales", 5000, "Nevada", "Idaho", db)
 
@@ -102,8 +177,8 @@ def main():
     """
     
     # Loop through json file and add all the names to the firebase.
-    for state in data:
-        db.collection("States").document(state).set(data[state])
+    # for state in data:
+    #     db.collection("States").document(state).set(data[state])
 
     # result = db.collection("States").document("Idaho").get()
     # if result.exists:
