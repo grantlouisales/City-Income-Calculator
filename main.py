@@ -7,7 +7,7 @@ from StatesInfo import StateInfo
 from User import User
 
 
-def open_data(filename, state_name):
+def open_data(filename):
     """
     Purpose: Reads a json and loads it into a variable.
     Return: variable holding json information.
@@ -15,7 +15,7 @@ def open_data(filename, state_name):
     f = open(filename)
     data = json.load(f)
 
-    return data[state_name]
+    return data
 
 def main():
     cred = credentials.Certificate("serviceAccountKey.json")
@@ -54,17 +54,19 @@ def main():
         user_city = result.to_dict()
         print(user_city["City"])
     """
-    data = open_data("States.json", "Oklahoma")
-    x = StateInfo(data)
-    
-    print(x._get_name())
+    data = open_data("States.json")
+
+    # Loop through json file and add all the names to the firebase.
+    for state in data:
+        db.collection("States").document(state).set(data[state])
+
+    result = db.collection("States").document("Idaho").get()
+    if result.exists:
+        city = result.to_dict()
+        print(city)
+
+    x = StateInfo(city)
     print(x._get_cost_index())
-    print(x._get_grocery_cost())
-    print(x._get_housing_cost())
-    print(x._get_utilities_cost())
-    print(x._get_transportation_cost())
-    print(x._get_misc_cost())
 
-
-
-main()
+if __name__ == "__main__":
+    main()
