@@ -31,6 +31,15 @@ def description():
     pass
 
 
+def compare_income(state, person, db):
+    """
+    Purpose: This function will grab the state and person 
+    given income and compare that to the states cost index.
+
+    Return: 
+    """
+    
+    pass
 def get_state_info(state, db):
     """
     Purpose: This will grab the state given by the user and
