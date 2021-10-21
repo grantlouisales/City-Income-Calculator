@@ -81,7 +81,6 @@ def state_cost_index_difference(state_1, state_2, db):
 
     state_1_cost_index = StateInfo(state1)._get_cost_index()
     state_2_cost_index = StateInfo(state2)._get_cost_index()
-    
     float_cost_index1 = float(state_1_cost_index)
     float_cost_index2 = float(state_2_cost_index)
 
