@@ -37,6 +37,9 @@ def description():
           "to the average price of $10,000. Idaho average cost of living would be equal to "
           "$10,000 * 92.3% which will come out to $9,230 for the average cost of living for Idaho.")
 
+def compare_income_to_other_state():
+    pass
+
 
 def get_state_info(state, db):
     """
@@ -181,7 +184,7 @@ def main():
         elif choice == "4":
             state_info = input("Please enter the name of the state you want to get info on> ")
             get_state_info(state_info, db)
-            
+
         elif choice == "5":
             print("HI")
         elif choice == "6":
