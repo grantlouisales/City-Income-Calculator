@@ -28,18 +28,16 @@ def description():
     Return: Nothing. This function will only print out a paragraph explaining
     everything. 
     """
-    pass
+    print("This program will allow you to add users, remove users, get state info, "
+          "difference of cost index between two states, and check income compared to another "
+          "states. Cost index is a way we can see the average cost of living in states. "
+          "For example Idaho has a cost index of 92.300. For cost index we want to see this "
+          "as a percentage so, 92.3%. We go off of a average cost of living price nationwide. To "
+          "make this easier lets say that average is $10,000. This percentage will be compared "
+          "to the average price of $10,000. Idaho average cost of living would be equal to "
+          "$10,000 * 92.3% which will come out to $9,230 for the average cost of living for Idaho.")
 
 
-def compare_income(state, person, db):
-    """
-    Purpose: This function will grab the state and person 
-    given income and compare that to the states cost index.
-
-    Return: 
-    """
-    
-    pass
 def get_state_info(state, db):
     """
     Purpose: This will grab the state given by the user and
@@ -162,43 +160,7 @@ def main():
 
     
     display_menu()
-
-    y = input("State1: ")
-    z = input("State2: ")
-    state_cost_index_difference(y, z, db)
-
-    # compare_income_to_state_cost_index("Grant Ales", 5000, "Nevada", "Idaho", db)
-
-    # # Set documents with known IDs and allow you to name the data.
-    # db.collection("Persons").document("Grant Ales").set(Grant_data) # Document reference
-
-    # # # Set documents with auto generated IDs
-    # db.collection("Persons").document("Jeremy Williams").set(Jeremy_data)  # Document reference
-
-    # # # Set documents with auto generated IDs
-    # db.collection("Persons").document("Breanna Ales").set(Breanna_data)  # Document reference
-
-    # Read Data
-    # Getting a document with a known ID
-
-    """
-    x = input("Name: ")
-    result = db.collection("Persons").document(x).get()
-
-    # Make sure the collection document exists and make sure you convert it to dict.
-    if result.exists:
-        user_city = result.to_dict()
-        print(user_city["City"])
-    """
-    
-    # Loop through json file and add all the names to the firebase.
-    # for state in data:
-    #     db.collection("States").document(state).set(data[state])
-
-    # result = db.collection("States").document("Idaho").get()
-    # if result.exists:
-    #     city = result.to_dict()
-    #     print(city)
+    description()
 
 if __name__ == "__main__":
     main()

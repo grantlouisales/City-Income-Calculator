@@ -14,4 +14,4 @@ class User():
         return self.monthly_income
 
     def __str__(self):
-        return f"{self.name} lives in {self.city} and makes {self.monthly_income} monthly."
+        return f"{self.name} lives in {self.state} and makes {self.monthly_income} monthly."
