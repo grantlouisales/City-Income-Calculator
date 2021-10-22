@@ -31,6 +31,6 @@ class StateInfo:
         uc = f"Utilities Cost - {self.information['utilitiesCost']}\n"
         tc = f"Transportation Cost - {self.information['transportationCost']}\n"
         mc = f"Misc Cost - {self.information['miscCost']}\n"
-        return f"{gn}{ci}{gc}{hc}{uc}{tc}{mc}"
+        return f"\n{gn}{ci}{gc}{hc}{uc}{tc}{mc}"
 
 

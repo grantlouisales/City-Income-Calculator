@@ -28,7 +28,7 @@ def description():
     Return: Nothing. This function will only print out a paragraph explaining
     everything. 
     """
-    print("This program will allow you to add users, remove users, get state info, "
+    print("\nThis program will allow you to add users, remove users, get state info, "
           "difference of cost index between two states, and check income compared to another "
           "states. Cost index is a way we can see the average cost of living in states. "
           "For example Idaho has a cost index of 92.300. For cost index we want to see this "
@@ -82,7 +82,7 @@ def state_cost_index_difference(state_1, state_2, db):
     float_cost_index1 = float(state_1_cost_index)
     float_cost_index2 = float(state_2_cost_index)
 
-    print(f"{state_1} - {state_1_cost_index} || {state_2} - {state_2_cost_index}")
+    print(f"\n{state_1} - {state_1_cost_index} || {state_2} - {state_2_cost_index}")
 
     if float_cost_index1 > float_cost_index2:
         result = float_cost_index1 - float_cost_index2
@@ -158,9 +158,36 @@ def main():
     data = open_data("States.json")
     valid = True
 
-    
-    display_menu()
     description()
+    while valid:
+        display_menu()
+        choice = input("Please choose a number> ")
+
+        if choice == "1":
+            name = input("Please enter the name of the person to be added> ")
+            state = input("Please enter the state of the person to be added> ")
+            monthly_income = input("Please enter the monthly income of the person to be added > ")
+            add_person(name, state, monthly_income, db)
+
+        elif choice == "2":
+            name = input("Please enter the name of the person to be removed> ")
+            remove_person(name, db)
+
+        elif choice == "3":
+            state1 = input("Please enter the name of the state you want to check> ")
+            state2 = input("Please enter the name of the second state you want to check> ")
+            state_cost_index_difference(state1, state2, db)
+
+        elif choice == "4":
+            state_info = input("Please enter the name of the state you want to get info on> ")
+            get_state_info(state_info, db)
+            
+        elif choice == "5":
+            print("HI")
+        elif choice == "6":
+            valid = False
+
+
 
 if __name__ == "__main__":
     main()
