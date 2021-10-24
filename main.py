@@ -169,7 +169,7 @@ def main():
         if choice == "1":
             name = input("Please enter the name of the person to be added> ")
             state = input("Please enter the state of the person to be added> ")
-            monthly_income = input("Please enter the monthly income of the person to be added > ")
+            monthly_income = input("Please enter the monthly income of the person to be added> ")
             add_person(name, state, monthly_income, db)
 
         elif choice == "2":
@@ -187,9 +187,9 @@ def main():
 
         elif choice == "5":
             print("HI")
+
         elif choice == "6":
             valid = False
-
 
 
 if __name__ == "__main__":
