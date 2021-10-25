@@ -37,8 +37,50 @@ def description():
           "to the average price of $10,000. Idaho average cost of living would be equal to "
           "$10,000 * 92.3% which will come out to $9,230 for the average cost of living for Idaho.")
 
-def compare_income_to_other_state():
-    pass
+def compare_income_to_other_state(person, state, db):
+    """
+    Purpose:
+    Return:
+    """
+    person_result = db.collection("Persons").document(person).get()
+    state_result = db.collection("States").document(state).get()
+
+    if person_result.exists and state_result.exists:
+        person_data = person_result.to_dict()
+        state_data = state_result.to_dict()
+
+        person = User(person, person_data["State"], person_data["Income"])
+        person_state_data = db.collection("States").document(person._get_state()).get()
+
+        if person_state_data.exists:
+            state1_data = person_state_data.to_dict()
+
+            state1 = StateInfo(state1_data)
+            state2 = StateInfo(state_data)
+
+            print(f"\nLets take {person._get_name()}'s income for an example. To put it into perspective let's "
+                "make their income the nationwide median price. If the income is 5000 then "
+                "a state with 50 cost index would come out to 2500 overall cost of living. We are going to use "
+                f"{person._get_name()}'s current living state and their index.\n")
+
+            income = float(person._get_monthly_income())
+            cost_index1 = float(state1._get_cost_index())
+            cost_index2 = float(state2._get_cost_index())
+            
+            state_1_total = income * (cost_index1 / 100)
+            state_2_total = income * (cost_index2 / 100)
+
+            print(f"Going off of {person._get_name()}'s income as the nationwide medium, In their "
+                  f"state of {state1._get_name()} they would only need ${state_1_total} to live comfortably. "
+                  f"For them to live comfortably in {state2._get_name()} they would need ${state_2_total}.")
+
+        else:
+            print("One of these does not exists")
+
+        
+    else:
+        print("One of these does not exists")
+
 
 
 def get_state_info(state, db):
@@ -158,7 +200,6 @@ def main():
 
     # Stores client to firestore database.
     db = firestore.client()
-    data = open_data("States.json")
     valid = True
 
     description()
@@ -186,7 +227,9 @@ def main():
             get_state_info(state_info, db)
 
         elif choice == "5":
-            print("HI")
+            name = input("Please enter the name of the person to be looked at> ")
+            state = input("Please enter the state you want to look at> ")
+            compare_income_to_other_state(name, state, db)
 
         elif choice == "6":
             valid = False
