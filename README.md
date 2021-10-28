@@ -7,7 +7,7 @@ This state cost index calculator was made to teach me about cloud databases. I w
 This project will allow someone to add users, remove users, find the difference of cost index between 2 states, and take users income and set it as a median to see how much money is needed for other states. This program integrates state info and user info with firebase. It allows the program to receive data on state information and user information.
 
 ## Software Demo Video
-* [Demo Video]()
+* [Demo Video](https://www.youtube.com/watch?v=GSpVHuOKsNU)
 
 # Cloud Database
 The cloud database I decided to use was google firebase. I created 2 collections inside of the database. The first collection is used for containing users and their information. The second collection is used for states and their information.
